@@ -1,16 +1,28 @@
-function makeCoffee( sugar, milk )
-{
-    var instructions = "Boil water,";
+// function makeCoffee( sugar, milk )
+// {
+//     var instructions = "Boil water,";
     
-    instructions += " pour into cup,";
+//     instructions += " pour into cup,";
     
-    instructions += " add coffee granules,";
+//     instructions += " add coffee granules,";
     
-    instructions += " add " + sugar + " spoons of sugar,";
+//     instructions += " add " + sugar + " spoons of sugar,";
     
-    instructions += " add " + milk + "% milk.";
+//     instructions += " add " + milk + "% milk.";
     
-    return instructions;
-}
+//     return instructions;
+// }
 
-console.log( makeCoffee( 2, 20 ) );
+// console.log( makeCoffee( 2, 20 ) );
+
+var car = {
+    color : 'red',
+    speed : 200,
+    drive : function(){return "drive";}
+};
+
+var shoppinglist =  [
+    'apple',
+    'orange',
+    'pear'
+];
