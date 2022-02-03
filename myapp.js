@@ -1,24 +1,24 @@
-var car = {
-    make: "volvo",
-    speed: 160,
-    engine: {
-        size: 2.0,
-        make: "bmw",
-        fuel: "petrol",
-        pistons:[
-            { maker: "BMW" },
-            { maker: "BMW2" }
-        ]
-    },
-    drive: function(){ return "drive"; }
-};
-
 var array = [ 
     "string",
+    "hello",
+    "world200",
     100,
-    [ "embed", 200 ],
-    { car: "ford" },
-    function(){ return "drive"; }
+    function(){ return "drive"; },
 ];
 
-console.log( car.make );
+// Assignment
+array[0] = "New string";
+
+// Methods
+array.shift(); // Delete's first element
+array.pop(); // Delete's last element
+
+// Add new values to the beginning of the array
+array.unshift( "new", "values" );
+
+// Add new values to the end of the array
+array.push( "ending", "values" );
+
+// Splice can do anything remember
+// splice( point, delete, add values... )
+array.splice( 2, 2, "new elemets", [], {}, 200, 300, function(){} );
