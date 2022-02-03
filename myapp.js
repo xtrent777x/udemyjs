@@ -1,24 +1,29 @@
-var array = [ 
-    "string",
-    "hello",
-    "world200",
-    100,
-    function(){ return "drive"; },
-];
+function name( fullname )
+{    
+    return fullname.firstname + fullname.lastname;
+}
 
-// Assignment
-array[0] = "New string";
+// Where there are objects...
+var name1 = { firstname: "Lawrence", lastname: "Turton"  };
 
-// Methods
-array.shift(); // Delete's first element
-array.pop(); // Delete's last element
+const name2 = { firstname: "John", lastname: "Doe"  };
 
-// Add new values to the beginning of the array
-array.unshift( "new", "values" );
+console.log(
+    name( name1 ),
+    name( name2 )
+);
 
-// Add new values to the end of the array
-array.push( "ending", "values" );
+// There are callable objects
+function embed( run )
+{
+    return run();
+}
 
-// Splice can do anything remember
-// splice( point, delete, add values... )
-array.splice( 2, 2, "new elemets", [], {}, 200, 300, function(){} );
+var name3 = function() { return "John Lock"  };
+
+const name4 = function() { return "Stephanie Lock" };
+
+console.log(
+    embed( name3 ),
+    embed( name4 )
+);
