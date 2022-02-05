@@ -1,14 +1,26 @@
-console.log( myName, printName() );
+var engine = {
+    maker: "Ford",
+    headGasket:{
+        maker: "Golf",
+        pots:[
+            "piston1",
+            "piston2"
+        ]
+    }
+};
 
-var myName = "Lawrence";
 
-function printName()
-{
-    console.log( a, embed() );
+function runExpression()
+{   
+    var a = 10;
     
-    var a = 100;
+    function add(b)
+    {   
+        return a + b;
+    }
     
-    function embed(){ return "hello"; }
-    
-    return "John Doe";
+    console.log(
+        add(90),
+        add(20)
+    );
 }
