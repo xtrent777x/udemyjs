@@ -1,32 +1,33 @@
-var engine = {
-    maker: "Ford",
-    headGasket:{
-        maker: "Golf",
-        pots:[
-            "piston1",
-            "piston2"
-        ]
+//console.log( this );
+
+var object = {
+    prop: this,
+    embed:
+    {
+        method: function(){ return this; }
     }
 };
 
+var array = [
+    this,
+    function(){ return this; }
+];
 
-function runExpression()
-{   
-    var a = 10;
-    
-    function add()
-    {   
-        // Scoped engine
-        // var engine = "New engine";
-        
-        // Inferred globals
-        console.log( engine, a );
-        
-        // Clobbering the global scope
-        test = "new stirng";
-        test2 = "new string 2";
-        test3 = "new string 3";
-    }
-    
-    add();
+function global(){
+    return this;
 }
+
+// Normal invokation
+global();
+object.embed.method();
+array[1]();
+
+// Assign context
+global.call( object );
+object.embed.method.call( object );
+array[1].call( object );
+
+// New context
+new global();
+new object.embed.method( object );
+new array[1]();
