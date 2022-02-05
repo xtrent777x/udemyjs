@@ -14,13 +14,19 @@ function runExpression()
 {   
     var a = 10;
     
-    function add(b)
+    function add()
     {   
-        return a + b;
+        // Scoped engine
+        // var engine = "New engine";
+        
+        // Inferred globals
+        console.log( engine, a );
+        
+        // Clobbering the global scope
+        test = "new stirng";
+        test2 = "new string 2";
+        test3 = "new string 3";
     }
     
-    console.log(
-        add(90),
-        add(20)
-    );
+    add();
 }
