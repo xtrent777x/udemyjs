@@ -1,29 +1,14 @@
-function name( fullname )
-{    
-    return fullname.firstname + fullname.lastname;
-}
+console.log( myName, printName() );
 
-// Where there are objects...
-var name1 = { firstname: "Lawrence", lastname: "Turton"  };
+var myName = "Lawrence";
 
-const name2 = { firstname: "John", lastname: "Doe"  };
-
-console.log(
-    name( name1 ),
-    name( name2 )
-);
-
-// There are callable objects
-function embed( run )
+function printName()
 {
-    return run();
+    console.log( a, embed() );
+    
+    var a = 100;
+    
+    function embed(){ return "hello"; }
+    
+    return "John Doe";
 }
-
-var name3 = function() { return "John Lock"  };
-
-const name4 = function() { return "Stephanie Lock" };
-
-console.log(
-    embed( name3 ),
-    embed( name4 )
-);
