@@ -1,33 +1,11 @@
-//console.log( this );
-
-var object = {
-    prop: this,
-    embed:
-    {
-        method: function(){ return this; }
-    }
-};
-
-var array = [
-    this,
-    function(){ return this; }
-];
-
-function global(){
-    return this;
+function Apple( x, y, color, score )
+{   
+    this.x = x;
+    this.y = y;
+    this.color = color;
+    this.score = score;
 }
 
-// Normal invokation
-global();
-object.embed.method();
-array[1]();
-
-// Assign context
-global.call( object );
-object.embed.method.call( object );
-array[1].call( object );
-
-// New context
-new global();
-new object.embed.method( object );
-new array[1]();
+var apple1 = new Apple( 10, 20, "red", 200 );
+var apple2 = new Apple( 100, 200, "green", 50 );
+var apple3 = new Apple( 20, 200, "pink", 10 );
