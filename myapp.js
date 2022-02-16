@@ -14,3 +14,5 @@ for( var index in classRegister )
 {
     console.log( classRegister[ index ] );
 }
+// you always want an end point so isnt endless cycle. 
+//these run fast real time
