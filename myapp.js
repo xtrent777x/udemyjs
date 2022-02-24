@@ -18,3 +18,4 @@ for( var index in classRegister )
 //these run fast real time
 // merrick
 for ()
+(for(russia attack))
